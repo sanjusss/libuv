@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(libuv)
 
 if(MSVC)
-  list(APPEND uv_cflags /W4)
+  list(APPEND uv_cflags /W4 /utf-8 )
 elseif(CMAKE_C_COMPILER_ID MATCHES "AppleClang|Clang|GNU")
   list(APPEND uv_cflags -fvisibility=hidden --std=gnu89)
   list(APPEND uv_cflags -Wall -Wextra -Wstrict-prototypes)
